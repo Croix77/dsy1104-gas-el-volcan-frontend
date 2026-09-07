@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicita tu cilindro de gas a domicilio en Distribuidora Gas El Volcán">
+
+    <title>Realizar pedido | Gas El Volcán</title>
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+
+<body>
+
+    <!-- cabecera -->
+    <header>
+
+        <div class="cabecera">
+
+            <div class="logo">
+
+                <img src="assets/img/banner-gas-el-volcan.png"
+                     alt="Gas El Volcán - distribución de gas a domicilio">
+
+            </div>
+
+        </div>
+
+
+        <!-- menu de navegacion -->
+        <nav>
+
+            <button
+                id="menuHamburguesa">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <ul id="navegacion">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="productos.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pedido.html"
+                       class="activo">
+                        Realizar pedido
+                    </a>
+                </li>
+
+                <li>
+                    <a href="seguimiento.html">
+                        Seguimiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- contenido principal -->
+    <main>
+
+        <!-- titulo de la pagina -->
+        <section class="encabezado-pagina">
+
+            <h1>Realizar pedido</h1>
+
+            <p>
+                Completa el formulario y recibirás
+                tu cilindro de gas en la puerta de tu casa,
+                sin llamar por teléfono.
+            </p>
+
+        </section>
+
+
+        <!-- formulario de pedido -->
+        <section class="seccion-formulario">
+
+            <h2>Formulario de pedido</h2>
+
+            <p>
+                Los datos con <strong>*</strong> son obligatorios.
+            </p>
+
+
+            <form id="formulario-pedido" novalidate>
+
+                <!-- nombre -->
+                <div class="campo-formulario">
+
+                    <label for="nombre">
+                        Nombre completo *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        maxlength="50"
+                        placeholder="Ej: María González"
+                        required>
+
+                    <small
+                        id="error-nombre"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- telefono -->
+                <div class="campo-formulario">
+
+                    <label for="telefono">
+                        Teléfono *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        maxlength="9"
+                        placeholder="912345678"
+                        required>
+
+                    <small
+                        id="error-telefono"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- direccion -->
+                <div class="campo-formulario">
+
+                    <label for="direccion">
+                        Dirección de entrega *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        maxlength="100"
+                        placeholder="Ej: Av. Collín 1250, Chillán"
+                        required>
+
+                    <small
+                        id="error-direccion"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- eleccion del cilindro -->
+                <fieldset class="grupo-producto">
+
+                    <legend>
+                        Elige tu cilindro *
+                    </legend>
+
+                    <div class="tarjetas-producto">
+
+                        <label class="tarjeta-producto">
+                            <input type="radio"
+                                   name="producto"
+                                   value="Cilindro 5 kg">
+
+                            <img src="assets/img/gas-5kg.png"
+                                 alt="Cilindro de gas de 5 kilogramos">
+
+                            <strong>Cilindro 5 kg</strong>
+
+                            <span>$17.000 · bajo consumo</span>
+                        </label>
+
+
+                        <label class="tarjeta-producto">
+                            <input type="radio"
+                                   name="producto"
+                                   value="Cilindro 11 kg">
+
+                            <img src="assets/img/gas-11kg.png"
+                                 alt="Cilindro de gas de 11 kilogramos">
+
+                            <strong>Cilindro 11 kg</strong>
+
+                            <span>$29.000 · consumo diario</span>
+                        </label>
+
+
+                        <label class="tarjeta-producto">
+                            <input type="radio"
+                                   name="producto"
+                                   value="Cilindro 15 kg">
+
+                            <img src="assets/img/gas-15kg.png"
+                                 alt="Cilindro de gas de 15 kilogramos">
+
+                            <strong>Cilindro 15 kg</strong>
+
+                            <span>$37.000 · mayor consumo</span>
+                        </label>
+
+                    </div>
+
+                    <small
+                        id="error-producto"
+                        class="mensaje-error">
+                    </small>
+
+                </fieldset>
+
+
+                <!-- cantidad -->
+                <div class="campo-formulario">
+
+                    <label for="cantidad">
+                        Cantidad *
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        name="cantidad"
+                        min="1"
+                        max="20"
+                        value="1"
+                        required>
+
+                    <small
+                        id="error-cantidad"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- observaciones -->
+                <div class="campo-formulario">
+
+                    <label for="observaciones">
+                        Observaciones
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        name="observaciones"
+                        rows="4"
+                        maxlength="200"
+                        placeholder="Ej: dejar en portería...">
+                    </textarea>
+
+                    <small
+                        id="error-observaciones"
+                        class="mensaje-error">
+                    </small>
+
+                    <small class="pista-formulario">
+                        <span id="contador-observaciones">0</span>/200
+                    </small>
+
+                </div>
+
+
+                <!-- resumen del pedido -->
+                <div class="resumen-pedido">
+
+                    <h3>Resumen de tu pedido</h3>
+
+                    <p>
+                        Producto:
+                        <span id="resumen-producto">Sin seleccionar</span>
+                    </p>
+
+                    <p>
+                        Cantidad:
+                        <span id="resumen-cantidad">1</span>
+                    </p>
+
+                    <p>
+                        Dirección:
+                        <span id="resumen-direccion">Sin completar</span>
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton">
+
+                    Realizar pedido
+
+                </button>
+
+
+                <p
+                    id="mensaje-exito"
+                    class="mensaje-exito">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- pie de pagina -->
+    <footer>
+
+        <p>
+            Distribuidora Gas El Volcán
+        </p>
+
+        <p>
+            Chillán, Región de Ñuble
+        </p>
+
+        <p>
+            &copy; 2026 Gas El Volcán
+        </p>
+
+    </footer>
+
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
