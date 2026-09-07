@@ -340,3 +340,186 @@ footer p {
         max-width: 100%;
     }
 }
+
+/* =========================================
+   PÁGINA CONTACTO
+========================================= */
+
+.encabezado-pagina {
+    text-align: center;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.encabezado-pagina h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.encabezado-pagina p {
+    color: #666666;
+}
+
+
+/* Información de contacto */
+
+.seccion-contacto {
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Tarjetas */
+
+.contenedor-contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-contacto {
+    background-color: white;
+
+    padding: 25px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.tarjeta-contacto h3 {
+    color: #d94b20;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.seccion-formulario {
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 8px;
+}
+
+.seccion-formulario h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.seccion-formulario > p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666666;
+}
+
+
+/* Campo individual */
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+/* Controles */
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+}
+
+
+/* Cuando el usuario selecciona un campo */
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+
+    outline: none;
+
+    border-color: #e65324;
+}
+
+
+/* Mensajes de error */
+
+.mensaje-error {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #b42318;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ACCESO A PEDIDOS
+========================================= */
+
+.contacto-pedido {
+
+    text-align: center;
+
+    background-color: #333333;
+
+    color: white;
+
+    padding: 35px 20px;
+
+    border-radius: 8px;
+}
+
+.contacto-pedido h2 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   CONTACTO RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .contenedor-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-formulario {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+}
