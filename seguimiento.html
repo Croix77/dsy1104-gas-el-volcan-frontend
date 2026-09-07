@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta el estado de tu pedido de gas a domicilio en Distribuidora Gas El Volcán">
+
+    <title>Seguimiento | Gas El Volcán</title>
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+
+<body>
+
+    <!-- cabecera -->
+    <header>
+
+        <div class="cabecera">
+
+            <div class="logo">
+
+                <img src="assets/img/banner-gas-el-volcan.png"
+                     alt="Gas El Volcán - distribución de gas a domicilio">
+
+            </div>
+
+        </div>
+
+
+        <!-- menu de navegacion -->
+        <nav>
+
+            <button
+                id="menuHamburguesa">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <ul id="navegacion">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="productos.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pedido.html">
+                        Realizar pedido
+                    </a>
+                </li>
+
+                <li>
+                    <a href="seguimiento.html"
+                       class="activo">
+                        Seguimiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- contenido principal -->
+    <main>
+
+        <!-- titulo de la pagina -->
+        <section class="encabezado-pagina">
+
+            <h1>Seguimiento de pedido</h1>
+
+            <p>
+                Ingresa el número de tu pedido para ver
+                el avance de tu entrega.
+            </p>
+
+        </section>
+
+
+        <!-- form para consultar -->
+        <section class="seccion-formulario">
+
+            <h2>Consultar mi pedido</h2>
+
+            <p>
+                El número de pedido se genera al
+                realizar la solicitud.
+            </p>
+
+
+            <form id="formulario-seguimiento" novalidate>
+
+                <div class="campo-formulario">
+
+                    <label for="numero-pedido">
+                        Número de pedido *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numero-pedido"
+                        name="numero-pedido"
+                        maxlength="14"
+                        placeholder="GV-2026-1234"
+                        required>
+
+                    <small
+                        id="error-numero"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton">
+
+                    Consultar estado
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- resultado del seguimiento -->
+        <section
+            id="resultado-seguimiento"
+            class="seccion-resultado"
+            hidden>
+
+            <!-- datos del pedido -->
+            <div class="tarjeta-seguimiento">
+
+                <p>
+                    Número de pedido:
+                    <span id="numero-mostrado">-</span>
+                </p>
+
+                <p>
+                    Estado actual:
+                    <span id="estado-actual">-</span>
+                </p>
+
+                <p>
+                    Repartidor:
+                    <span id="repartidor">-</span>
+                </p>
+
+                <p>
+                    Hora estimada:
+                    <span id="hora-estimada">-</span>
+                </p>
+
+            </div>
+
+
+            <!-- estados del envio -->
+            <ol class="estados-pedido">
+
+                <li class="estado">
+                    Recibido
+                </li>
+
+                <li class="estado">
+                    Asignado
+                </li>
+
+                <li class="estado">
+                    En camino
+                </li>
+
+                <li class="estado">
+                    Entregado
+                </li>
+
+            </ol>
+
+
+            <!-- descripcion del estado -->
+            <div class="detalle-estado">
+
+                <p
+                    id="descripcion-estado">
+                </p>
+
+            </div>
+
+
+            <!-- boton de la simulacion -->
+            <div class="panel-acciones">
+
+                <button
+                    type="button"
+                    id="boton-avanzar"
+                    class="boton boton-secundario">
+
+                    Simular siguiente estado
+
+                </button>
+
+            </div>
+
+
+            <!-- aviso -->
+            <div class="aviso-demo">
+
+                <p>
+                    Vista simulada de esta etapa. Más adelante
+                    el estado se actualizará en tiempo real
+                    desde el sistema.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- pie de pagina -->
+    <footer>
+
+        <p>
+            Distribuidora Gas El Volcán
+        </p>
+
+        <p>
+            Chillán, Región de Ñuble
+        </p>
+
+        <p>
+            &copy; 2026 Gas El Volcán
+        </p>
+
+    </footer>
+
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
