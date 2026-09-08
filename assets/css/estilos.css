@@ -75,7 +75,7 @@ header {
 
 
 /* =========================================
-   NAVEGACIÓN
+   NAVEGACI├ôN
 ========================================= */
 
 nav {
@@ -122,7 +122,7 @@ section {
 
 
 /* =========================================
-   SECCIÓN DE INICIO
+   SECCI├ôN DE INICIO
 ========================================= */
 
 .inicio {
@@ -233,7 +233,7 @@ section {
 
 
 /* =========================================
-   INFORMACIÓN DE LA EMPRESA
+   INFORMACI├ôN DE LA EMPRESA
 ========================================= */
 
 .empresa {
@@ -295,7 +295,7 @@ footer p {
 
 
 /* =========================================
-   RESPONSIVE - TELÉFONO
+   RESPONSIVE - TEL├ëFONO
 ========================================= */
 
 @media (max-width: 600px) {
@@ -341,8 +341,385 @@ footer p {
     }
 }
 
+.contenedor {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.encabezado-productos {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tarjeta-producto {
+    padding: 1rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.tarjeta-producto h2 {
+    font-size: 1.2rem;
+}
+
+.precio {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #b91c1c;
+}
+
+.tarjeta-producto button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #b91c1c;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.tarjeta-producto button:hover {
+    background-color: #8f1616;
+}
+
+@media (max-width: 768px) {
+    .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* =========================================
-   PÁGINA CONTACTO
+   DETALLE DE PRODUCTO
+========================================= */
+
+.enlace-detalle {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.enlace-detalle:hover h2 {
+    color: #b91c1c;
+}
+
+.seccion-detalle {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.detalle-producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.detalle-producto-imagen {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.detalle-producto-imagen img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    object-fit: contain;
+}
+
+.detalle-producto-info h1 {
+    font-size: 1.8rem;
+    color: #222222;
+    margin-bottom: 0.5rem;
+}
+
+.categoria {
+    display: inline-block;
+    background-color: #fde8db;
+    color: #b45309;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+
+.descripcion-larga {
+    color: #555555;
+    margin: 1rem 0;
+}
+
+.detalle-stock {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #166534;
+}
+
+.alerta-stock {
+    color: #b91c1c;
+}
+
+.alerta-stock-critico {
+    color: #d97706;
+    font-weight: normal;
+}
+
+.detalle-producto-info .boton-agregar {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.boton-agregar:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.enlace-volver {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #b91c1c;
+    text-decoration: none;
+}
+
+.enlace-volver:hover {
+    text-decoration: underline;
+}
+
+.mensaje-aviso {
+    background-color: #fef9c3;
+    color: #713f12;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mensaje-aviso a {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CARRITO DE COMPRAS
+========================================= */
+
+.contenido-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fila-carrito {
+    display: grid;
+    grid-template-columns: 90px 1fr auto auto auto;
+    gap: 1rem;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.fila-carrito img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.info-fila h2 {
+    font-size: 1.1rem;
+    color: #222222;
+}
+
+.info-fila p {
+    color: #666666;
+}
+
+.cantidad-carrito {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.boton-cantidad {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.boton-cantidad:hover {
+    background-color: #f4f4f4;
+}
+
+.subtotal-fila {
+    min-width: 90px;
+    text-align: right;
+}
+
+.boton-quitar {
+    border: 1px solid #d62828;
+    background-color: #ffffff;
+    color: #d62828;
+    padding: 0.5rem 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-quitar:hover {
+    background-color: #d62828;
+    color: #ffffff;
+}
+
+.resumen-carrito {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.resumen-carrito h2 {
+    margin-bottom: 1rem;
+}
+
+.linea-resumen {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+.linea-resumen.total {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 0.5rem;
+    padding-top: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.resumen-carrito .boton {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.boton-secundario {
+    background-color: #6b7280;
+}
+
+.boton-secundario:hover {
+    background-color: #4b5563;
+}
+
+@media (max-width: 768px) {
+    .detalle-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .fila-carrito {
+        grid-template-columns: 70px 1fr auto;
+    }
+
+    .fila-carrito .precio.subtotal-fila {
+        grid-column: 2 / 3;
+        text-align: left;
+    }
+
+    .boton-quitar {
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .detalle-producto-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .resumen-carrito {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   AVISOS Y ETIQUETAS DE STOCK
+========================================= */
+
+.aviso-feedback {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    text-align: center;
+}
+
+.aviso-feedback.exito {
+    background-color: #166534;
+}
+
+.aviso-feedback.error {
+    background-color: #b91c1c;
+}
+
+.etiqueta-stock {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.etiqueta-stock.critico {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.etiqueta-stock.agotado {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+/* =========================================
+   P├üGINA CONTACTO
 ========================================= */
 
 .encabezado-pagina {
@@ -362,7 +739,7 @@ footer p {
 }
 
 
-/* Información de contacto */
+/* Informaci├│n de contacto */
 
 .seccion-contacto {
     text-align: center;
