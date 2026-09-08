@@ -25,6 +25,48 @@ const productos = [
     }
 ];
 
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarContadorCarrito();
+}
+
+function agregarAlCarrito(codigo) {
+    const productoSeleccionado = productos.find(
+        (producto) => producto.codigo === codigo
+    );
+
+    const productoEnCarrito = carrito.find(
+        (producto) => producto.codigo === codigo
+    );
+
+    if (productoEnCarrito) {
+        productoEnCarrito.cantidad++;
+    } else {
+        carrito.push({
+            ...productoSeleccionado,
+            cantidad: 1
+        });
+    }
+
+    guardarCarrito();
+
+}
+function actualizarContadorCarrito() {
+    const contadorCarrito = document.querySelector("#contador-carrito");
+
+    if (!contadorCarrito) {
+        return;
+    }
+
+    const cantidadTotal = carrito.reduce(function (total, producto) {
+        return total + producto.cantidad;
+    }, 0);
+
+    contadorCarrito.textContent = cantidadTotal;
+}
+
 function mostrarProductos() {
     const listaProductos = document.querySelector("#lista-productos");
 
@@ -42,10 +84,30 @@ function mostrarProductos() {
                 <p>${producto.descripcion}</p>
                 <p class="precio">$${producto.precio.toLocaleString("es-CL")}</p>
                 <p>Stock disponible: ${producto.stock}</p>
-                <button type="button">Añadir al carrito</button>
+                <button
+                    type="button"
+                    class="boton-agregar"
+                    data-codigo="${producto.codigo}"
+                >
+                    Añadir al carrito
+                </button>
             </article>
         `;
     }
 }
 
 mostrarProductos();
+
+const listaProductos = document.querySelector("#lista-productos");
+
+if (listaProductos) {
+    listaProductos.addEventListener("click", function (event) {
+        if (!event.target.classList.contains("boton-agregar")) {
+            return;
+        }
+
+        agregarAlCarrito(event.target.dataset.codigo);
+    });
+}
+
+actualizarContadorCarrito();
