@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras | Distribuidora Gas El Volcán</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/banner-gas-el-volcan.png" alt="Gas El Volcán - Distribución de gas a domicilio">
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li>
+                    <a href="carrito.html" aria-current="page">
+                        Carrito (<span id="contador-carrito">0</span>)
+                    </a>
+                </li>
+                <li><a href="pedido.html">Realizar pedido</a></li>
+                <li><a href="seguimiento.html">Seguimiento</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <header class="encabezado-productos">
+            <h1>Carrito de compras</h1>
+            <p>Revisa los productos que has añadido a tu compra.</p>
+        </header>
+
+        <p id="carrito-vacio" class="mensaje-aviso">
+            Tu carrito está vacío. <a href="productos.html">Ver productos</a>
+        </p>
+
+        <section id="contenido-carrito" class="contenido-carrito" aria-live="polite">
+            <!-- Los productos del carrito se muestran con JavaScript -->
+        </section>
+
+        <aside id="resumen-carrito" class="resumen-carrito">
+            <h2>Resumen de compra</h2>
+            <div class="linea-resumen">
+                <span>Subtotal</span>
+                <span id="subtotal-carrito">$0</span>
+            </div>
+            <div class="linea-resumen total">
+                <span>Total</span>
+                <span id="total-carrito">$0</span>
+            </div>
+            <button type="button" id="boton-vaciar" class="boton boton-secundario">Vaciar carrito</button>
+            <a href="pedido.html" class="boton">Finalizar pedido</a>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Distribuidora Gas El Volcán</p>
+        <p>Chillán, Región de Ñuble</p>
+        <p>&copy; 2026 Gas El Volcán</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
