@@ -671,3 +671,50 @@ footer p {
         max-width: 100%;
     }
 }
+
+
+/* =========================================
+   AVISOS Y ETIQUETAS DE STOCK
+========================================= */
+
+.aviso-feedback {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    text-align: center;
+}
+
+.aviso-feedback.exito {
+    background-color: #166534;
+}
+
+.aviso-feedback.error {
+    background-color: #b91c1c;
+}
+
+.etiqueta-stock {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.etiqueta-stock.critico {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.etiqueta-stock.agotado {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
