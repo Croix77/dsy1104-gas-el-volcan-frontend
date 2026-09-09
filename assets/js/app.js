@@ -3,9 +3,9 @@ const productos = [
         codigo: "CL001",
         nombre: "Cilindro GLP 5 kg",
         categoria: "Cilindros de Gas",
-        descripcion: "Para cocina y calefacci├│n peque├▒a en hogares de bajo consumo.",
+        descripcion: "Para cocina y calefaccionn pequeña en hogares de bajo consumo.",
         descripcionLarga:
-            "Cilindro de gas licuado de petr├│leo de 5 kg, pensado para hogares de bajo consumo. Perfecto para cocina, calefacci├│n peque├▒a o artefactos de uso ocasional. Fabricado bajo normativa vigente y con v├ílvula de seguridad.",
+            "Cilindro de gas licuado de petroleo de 5 kg, pensado para hogares de bajo consumo. Perfecto para cocina, calefaccion pequeña o artefactos de uso ocasional. Fabricado bajo normativa vigente y con valvula de seguridad.",
         precio: 6500,
         stock: 80,
         stockCritico: 10,
@@ -15,9 +15,9 @@ const productos = [
         codigo: "CL002",
         nombre: "Cilindro GLP 11 kg",
         categoria: "Cilindros de Gas",
-        descripcion: "Cilindro est├índar dom├®stico, el m├ís utilizado en los hogares.",
+        descripcion: "Cilindro estandar domestico, el mas utilizado en los hogares.",
         descripcionLarga:
-            "El cilindro m├ís utilizado en los hogares chilenos. Con 11 kg de capacidad es ideal para el consumo diario de una familia promedio, incluyendo cocina y calefacci├│n. Compatible con reguladores est├índar.",
+            "El cilindro mas utilizado en los hogares chilenos. Con 11 kg de capacidad es ideal para el consumo diario de una familia promedio, incluyendo cocina y calefaccion. Compatible con reguladores estandar.",
         precio: 12000,
         stock: 200,
         stockCritico: 20,
@@ -27,9 +27,9 @@ const productos = [
         codigo: "CL003",
         nombre: "Cilindro GLP 15 kg",
         categoria: "Cilindros de Gas",
-        descripcion: "Mayor capacidad para hogares de alto consumo o locales peque├▒os.",
+        descripcion: "Mayor capacidad para hogares de alto consumo o locales pequeños.",
         descripcionLarga:
-            "Cilindro de mayor capacidad, recomendado para hogares con alto consumo o locales peque├▒os. Con 15 kg de gas licuado se reduce la frecuencia de recargas y es ideal para calefacci├│n central o varios artefactos simult├íneos.",
+            "Cilindro de mayor capacidad, recomendado para hogares con alto consumo o locales pequeños. Con 15 kg de gas licuado se reduce la frecuencia de recargas y es ideal para calefaccion central o varios artefactos simultaneos.",
         precio: 16000,
         stock: 90,
         stockCritico: 15,
@@ -41,7 +41,7 @@ const productos = [
         categoria: "Cilindros de Gas",
         descripcion: "Cilindro industrial para restaurantes, talleres y locales.",
         descripcionLarga:
-            "Cilindro industrial de 45 kg. Uso comercial: restaurantes, talleres y calefacci├│n de locales. Pensado para clientes comerciales con alto consumo de gas licuado.",
+            "Cilindro industrial de 45 kg. Uso comercial: restaurantes, talleres y calefaccion de locales. Pensado para clientes comerciales con alto consumo de gas licuado.",
         precio: 45000,
         stock: 30,
         stockCritico: 5,
@@ -53,7 +53,7 @@ const productos = [
         categoria: "Reguladores",
         descripcion: "Regulador de 1 etapa para cilindros de 5, 11 y 15 kg.",
         descripcionLarga:
-            "Regulador de 1 etapa para cilindros de 5, 11 y 15 kg. Presi├│n de salida de 28 mbar. Compatible con los reguladores y mangueras est├índar del mercado.",
+            "Regulador de 1 etapa para cilindros de 5, 11 y 15 kg. Presion de salida de 28 mbar. Compatible con los reguladores y mangueras estandar del mercado.",
         precio: 8990,
         stock: 45,
         stockCritico: 8,
@@ -61,11 +61,11 @@ const productos = [
     },
     {
         codigo: "RG002",
-        nombre: "Regulador de alta presi├│n",
+        nombre: "Regulador de alta presion",
         categoria: "Reguladores",
         descripcion: "Para cocinas industriales o equipos de mayor consumo.",
         descripcionLarga:
-            "Regulador de alta presi├│n para cocinas industriales o equipos de mayor consumo. Presi├│n regulable seg├║n la necesidad del artefacto conectado.",
+            "Regulador de alta presion para cocinas industriales o equipos de mayor consumo. Presion regulable segun la necesidad del artefacto conectado.",
         precio: 18990,
         stock: 12,
         stockCritico: 3,
@@ -77,7 +77,7 @@ const productos = [
         categoria: "Reguladores",
         descripcion: "Permite conectar dos artefactos al mismo cilindro.",
         descripcionLarga:
-            "Regulador dual con dos salidas. Permite conectar dos artefactos simult├íneamente al mismo cilindro, ideal para hogares con varios equipos a gas.",
+            "Regulador dual con dos salidas. Permite conectar dos artefactos simultaneamente al mismo cilindro, ideal para hogares con varios equipos a gas.",
         precio: 14990,
         stock: 18,
         stockCritico: 4,
@@ -87,9 +87,9 @@ const productos = [
         codigo: "MG001",
         nombre: "Manguera gas 1.5 m",
         categoria: "Mangueras y Conexiones",
-        descripcion: "Manguera flexible homologada con di├ímetro interior de 9 mm.",
+        descripcion: "Manguera flexible homologada con diametro interior de 9 mm.",
         descripcionLarga:
-            "Manguera flexible homologada de 1.5 metros. Di├ímetro interior de 9 mm. Compatible con reguladores est├índar, ideal para distancias cortas entre el cilindro y el artefacto.",
+            "Manguera flexible homologada de 1.5 metros. Diametro interior de 9 mm. Compatible con reguladores estandar, ideal para distancias cortas entre el cilindro y el artefacto.",
         precio: 3990,
         stock: 80,
         stockCritico: 15,
@@ -99,9 +99,9 @@ const productos = [
         codigo: "MG002",
         nombre: "Manguera gas 3 m",
         categoria: "Mangueras y Conexiones",
-        descripcion: "Manguera larga cuando el artefacto est├í alejado del cilindro.",
+        descripcion: "Manguera larga cuando el artefacto esta alejado del cilindro.",
         descripcionLarga:
-            "Manguera larga de 3 metros para instalaciones donde el artefacto est├í alejado del cilindro. Flexible y homologada con las normas de seguridad vigentes.",
+            "Manguera larga de 3 metros para instalaciones donde el artefacto esta alejado del cilindro. Flexible y homologada con las normas de seguridad vigentes.",
         precio: 6990,
         stock: 50,
         stockCritico: 10,
@@ -113,7 +113,7 @@ const productos = [
         categoria: "Mangueras y Conexiones",
         descripcion: "Abrazadera de acero para asegurar conexiones.",
         descripcionLarga:
-            "Abrazadera de acero para asegurar la conexi├│n manguera-regulador y manguera-artefacto. Elemento de seguridad esencial en toda instalaci├│n de gas.",
+            "Abrazadera de acero para asegurar la conexion manguera-regulador y manguera-artefacto. Elemento de seguridad esencial en toda instalacion de gas.",
         precio: 990,
         stock: 200,
         stockCritico: 30,
@@ -121,11 +121,11 @@ const productos = [
     },
     {
         codigo: "MG004",
-        nombre: "Kit conexi├│n completo",
+        nombre: "Kit conexion completo",
         categoria: "Mangueras y Conexiones",
         descripcion: "Regulador + manguera 1.5 m + abrazaderas para instalar un cilindro.",
         descripcionLarga:
-            "Kit con todo lo necesario para instalar un cilindro nuevo: regulador, manguera de 1.5 metros y abrazaderas. Ahorra tiempo y asegura una instalaci├│n correcta.",
+            "Kit con todo lo necesario para instalar un cilindro nuevo: regulador, manguera de 1.5 metros y abrazaderas. Ahorra tiempo y asegura una instalacion correcta.",
         precio: 12990,
         stock: 25,
         stockCritico: 5,
@@ -135,9 +135,9 @@ const productos = [
         codigo: "AC001",
         nombre: "Carro porta cilindro 11/15 kg",
         categoria: "Accesorios",
-        descripcion: "Carro met├ílico con ruedas para transportar cilindros.",
+        descripcion: "Carro metalico con ruedas para transportar cilindros.",
         descripcionLarga:
-            "Carro met├ílico con ruedas para transportar cilindros de 11 y 15 kg dentro del hogar con seguridad y sin esfuerzo.",
+            "Carro metalico con ruedas para transportar cilindros de 11 y 15 kg dentro del hogar con seguridad y sin esfuerzo.",
         precio: 12990,
         stock: 20,
         stockCritico: 4,
@@ -145,11 +145,11 @@ const productos = [
     },
     {
         codigo: "AC002",
-        nombre: "Tapa protectora para v├ílvula",
+        nombre: "Tapa protectora para valvula",
         categoria: "Accesorios",
-        descripcion: "Tapa de pl├ístico ABS para proteger la v├ílvula en el transporte.",
+        descripcion: "Tapa de plastico ABS para proteger la valvula en el transporte.",
         descripcionLarga:
-            "Tapa de pl├ístico ABS para proteger la v├ílvula del cilindro durante el transporte o almacenamiento. Evita da├▒os y mantiene la v├ílvula limpia.",
+            "Tapa de plastico ABS para proteger la valvula del cilindro durante el transporte o almacenamiento. Evita daños y mantiene la valvula limpia.",
         precio: 1490,
         stock: 60,
         stockCritico: 12,
@@ -157,11 +157,11 @@ const productos = [
     },
     {
         codigo: "AC003",
-        nombre: "Detector de gas a bater├¡a",
+        nombre: "Detector de gas a bateria",
         categoria: "Accesorios",
-        descripcion: "Sensor electroqu├¡mico con alarma ante fugas de gas GLP o metano.",
+        descripcion: "Sensor electroquimico con alarma ante fugas de gas GLP o metano.",
         descripcionLarga:
-            "Detector de gas a bater├¡a con sensor electroqu├¡mico. Alarma sonora y visual ante fuga de gas GLP o metano. Elemento de seguridad recomendado para todos los hogares.",
+            "Detector de gas a bateria con sensor electroquimico. Alarma sonora y visual ante fuga de gas GLP o metano. Elemento de seguridad recomendado para todos los hogares.",
         precio: 19990,
         stock: 8,
         stockCritico: 2,
@@ -228,7 +228,7 @@ function agregarAlCarrito(codigo) {
     if (productoEnCarrito) {
         if (productoEnCarrito.cantidad < productoSeleccionado.stock) {
             productoEnCarrito.cantidad++;
-            mostrarAviso(productoSeleccionado.nombre + " a├▒adido al carrito.", "exito");
+            mostrarAviso(productoSeleccionado.nombre + " añadido al carrito.", "exito");
         } else {
             mostrarAviso(
                 "Stock m├íximo disponible alcanzado para " + productoSeleccionado.nombre + ".",
@@ -244,7 +244,7 @@ function agregarAlCarrito(codigo) {
             imagen: productoSeleccionado.imagen,
             cantidad: 1
         });
-        mostrarAviso(productoSeleccionado.nombre + " a├▒adido al carrito.", "exito");
+        mostrarAviso(productoSeleccionado.nombre + " añadido al carrito.", "exito");
     }
 
     guardarCarrito();
@@ -287,7 +287,7 @@ function mostrarProductos() {
                     data-codigo="${producto.codigo}"
                     ${agotado ? "disabled" : ""}
                 >
-                    ${agotado ? "Agotado" : "A├▒adir al carrito"}
+                    ${agotado ? "Agotado" : "Añadir al carrito"}
                 </button>
             </article>
         `;
