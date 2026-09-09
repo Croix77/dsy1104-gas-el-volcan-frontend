@@ -1013,4 +1013,345 @@ if (formularioContacto) {
         }
 
     });
+
+}
+
+// =========================================
+// validacion de correo permitido
+// =========================================
+
+function correoPermitido(correo) {
+    var dominio = correo.split('@')[1];
+    return dominio === 'duoc.cl' ||
+        dominio === 'profesor.duoc.cl' ||
+        dominio === 'gmail.com';
+}
+
+// =========================================
+// validacion de RUN (digito verificador)
+// =========================================
+
+function validarRun(run) {
+    var partes = run.split('-');
+
+    if (partes.length != 2) {
+        return false;
+    }
+
+    var cuerpo = partes[0].replace(/\./g, '');
+    var dvIngresado = partes[1].toUpperCase();
+
+    if (!/^\d{7,8}$/.test(cuerpo)) {
+        return false;
+    }
+
+    var serie = [3, 2, 7, 6, 5, 4, 3, 2];
+    var suma = 0;
+
+    for (var i = 0; i < cuerpo.length; i++) {
+        suma += parseInt(cuerpo.charAt(cuerpo.length - 1 - i)) * serie[i];
+    }
+
+    var resto = 11 - (suma % 11);
+    var dvCalculado;
+
+    if (resto == 11) {
+        dvCalculado = '0';
+    } else if (resto == 10) {
+        dvCalculado = 'K';
+    } else {
+        dvCalculado = String(resto);
+    }
+
+    return dvIngresado === dvCalculado;
+}
+
+// =========================================
+// pagina login
+// =========================================
+
+var formularioLogin = document.getElementById('formulario-login');
+
+if (formularioLogin) {
+
+    // validar el correo
+    function validarCorreoLogin() {
+        var correo = document.getElementById('correo-login').value.trim();
+        var error = document.getElementById('error-correo-login');
+
+        if (correo == '') {
+            error.textContent = 'Ingresa tu correo.';
+            return false;
+        }
+
+        if (!correoPermitido(correo)) {
+            error.textContent = 'El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // validar la clave
+    function validarClaveLogin() {
+        var clave = document.getElementById('clave-login').value;
+        var error = document.getElementById('error-clave-login');
+
+        if (clave == '') {
+            error.textContent = 'Ingresa tu contrasena.';
+            return false;
+        }
+
+        if (clave.length < 4 || clave.length > 10) {
+            error.textContent = 'La contrasena debe tener entre 4 y 10 caracteres.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // entrar al panel
+    function entrarAlPanel() {
+        var correo = document.getElementById('correo-login').value.trim();
+
+        var usuario = {
+            nombre: correo.split('@')[0],
+            correo: correo
+        };
+
+        localStorage.setItem('usuarioActivo', JSON.stringify(usuario));
+
+        window.location.href = 'panel.html';
+    }
+
+    document.getElementById('correo-login').addEventListener('input', function () {
+        document.getElementById('error-correo-login').textContent = '';
+    });
+
+    document.getElementById('clave-login').addEventListener('input', function () {
+        document.getElementById('error-clave-login').textContent = '';
+    });
+
+    formularioLogin.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+
+        var correcto = true;
+
+        if (!validarCorreoLogin()) correcto = false;
+        if (!validarClaveLogin()) correcto = false;
+
+        if (!correcto) {
+            return;
+        }
+
+        entrarAlPanel();
+    });
+}
+
+// =========================================
+// pagina registro
+// =========================================
+
+var formularioRegistro = document.getElementById('formulario-registro');
+
+if (formularioRegistro) {
+
+    // validar el nombre
+    function validarNombreRegistro() {
+        var nombre = document.getElementById('nombre-registro').value.trim();
+        var error = document.getElementById('error-nombre-registro');
+
+        if (nombre == '') {
+            error.textContent = 'Ingresa tu nombre.';
+            return false;
+        }
+
+        if (nombre.split(' ').length < 2) {
+            error.textContent = 'Ingresa nombre y apellido.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // validar el run
+    function validarRunRegistro() {
+        var run = document.getElementById('run-registro').value.trim();
+        var error = document.getElementById('error-run-registro');
+
+        if (run == '') {
+            error.textContent = 'Ingresa tu RUN.';
+            return false;
+        }
+
+        if (!validarRun(run)) {
+            error.textContent = 'El RUN no es valido.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // validar el correo
+    function validarCorreoRegistro() {
+        var correo = document.getElementById('correo-registro').value.trim();
+        var error = document.getElementById('error-correo-registro');
+
+        if (correo == '') {
+            error.textContent = 'Ingresa tu correo.';
+            return false;
+        }
+
+        if (!correoPermitido(correo)) {
+            error.textContent = 'El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // validar la clave
+    function validarClaveRegistro() {
+        var clave = document.getElementById('clave-registro').value;
+        var error = document.getElementById('error-clave-registro');
+
+        if (clave == '') {
+            error.textContent = 'Ingresa una contrasena.';
+            return false;
+        }
+
+        if (clave.length < 4 || clave.length > 10) {
+            error.textContent = 'La contrasena debe tener entre 4 y 10 caracteres.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // confirmar la clave
+    function validarClaveConfirmar() {
+        var clave = document.getElementById('clave-registro').value;
+        var confirmar = document.getElementById('clave-confirmar').value;
+        var error = document.getElementById('error-clave-confirmar');
+
+        if (confirmar == '') {
+            error.textContent = 'Repite tu contrasena.';
+            return false;
+        }
+
+        if (clave != confirmar) {
+            error.textContent = 'Las contrasenas no coinciden.';
+            return false;
+        }
+
+        error.textContent = '';
+        return true;
+    }
+
+    // guardar la cuenta y entrar al panel
+    function guardarCuenta() {
+        var nombre = document.getElementById('nombre-registro').value.trim();
+        var run = document.getElementById('run-registro').value.trim();
+        var correo = document.getElementById('correo-registro').value.trim();
+
+        var lista = JSON.parse(localStorage.getItem('usuarios') || '[]');
+
+        var yaExiste = false;
+
+        for (var i = 0; i < lista.length; i++) {
+            if (lista[i].correo == correo) {
+                yaExiste = true;
+            }
+        }
+
+        if (yaExiste) {
+            document.getElementById('mensaje-registro').textContent =
+                'Ese correo ya esta registrado.';
+            return false;
+        }
+
+        lista.push({
+            nombre: nombre,
+            run: run,
+            correo: correo
+        });
+
+        localStorage.setItem('usuarios', JSON.stringify(lista));
+
+        var usuario = {
+            nombre: nombre,
+            correo: correo,
+            run: run
+        };
+
+        localStorage.setItem('usuarioActivo', JSON.stringify(usuario));
+
+        window.location.href = 'panel.html';
+    }
+
+    document.getElementById('nombre-registro').addEventListener('input', function () {
+        document.getElementById('error-nombre-registro').textContent = '';
+    });
+
+    document.getElementById('run-registro').addEventListener('input', function () {
+        document.getElementById('error-run-registro').textContent = '';
+    });
+
+    document.getElementById('correo-registro').addEventListener('input', function () {
+        document.getElementById('error-correo-registro').textContent = '';
+    });
+
+    document.getElementById('clave-registro').addEventListener('input', function () {
+        document.getElementById('error-clave-registro').textContent = '';
+    });
+
+    document.getElementById('clave-confirmar').addEventListener('input', function () {
+        document.getElementById('error-clave-confirmar').textContent = '';
+    });
+
+    formularioRegistro.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+
+        var correcto = true;
+
+        if (!validarNombreRegistro()) correcto = false;
+        if (!validarRunRegistro()) correcto = false;
+        if (!validarCorreoRegistro()) correcto = false;
+        if (!validarClaveRegistro()) correcto = false;
+        if (!validarClaveConfirmar()) correcto = false;
+
+        if (!correcto) {
+            return;
+        }
+
+        guardarCuenta();
+    });
+}
+
+// =========================================
+// pagina panel
+// =========================================
+
+var panelUsuario = document.getElementById('panel-nombre');
+
+if (panelUsuario) {
+
+    var usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo') || 'null');
+
+    if (usuarioActivo) {
+        document.getElementById('panel-nombre').textContent = usuarioActivo.nombre;
+        document.getElementById('panel-correo').textContent = usuarioActivo.correo;
+        document.getElementById('panel-run').textContent = usuarioActivo.run || '-';
+    }
+
+    document.getElementById('boton-cerrar-sesion').addEventListener('click', function () {
+        localStorage.removeItem('usuarioActivo');
+        window.location.href = 'login.html';
+    });
 }

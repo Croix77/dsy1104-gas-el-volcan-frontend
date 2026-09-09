@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registrate en Distribuidora Gas El Volcan">
+
+    <title>Registro de usuario | Gas El Volcán</title>
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+
+<body>
+
+    <!-- CABECERA -->
+    <header>
+
+        <div class="cabecera">
+
+            <div class="logo">
+
+                <img src="assets/img/banner-gas-el-volcan.png" alt="Gas El Volcán - Distribución de gas a domicilio">
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <nav>
+            <button id="menuHamburguesa" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul id="menuPrincipal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="pedido.html">Realizar pedido</a></li>
+                <li><a href="seguimiento.html">Seguimiento</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Ingresar</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- ENCABEZADO DE LA PAGINA -->
+        <section class="encabezado-pagina">
+
+            <h1>Registro de usuario</h1>
+
+            <p>
+                Crea tu cuenta para acceder
+                al panel del sitio.
+            </p>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <section class="seccion-formulario">
+
+            <h2>Crear cuenta</h2>
+
+            <p>
+                Los datos con <strong>*</strong> son obligatorios.
+            </p>
+
+
+            <form id="formulario-registro" novalidate>
+
+                <div class="campo-formulario">
+
+                    <label for="nombre-registro">
+                        Nombre completo *
+                    </label>
+
+                    <input type="text" id="nombre-registro" name="nombre" maxlength="50" required>
+
+                    <small id="error-nombre-registro" class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="run-registro">
+                        RUN *
+                    </label>
+
+                    <input type="text" id="run-registro" name="run" maxlength="10"
+                        placeholder="12345678-5" required>
+
+                    <small id="error-run-registro" class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="correo-registro">
+                        Correo electrónico *
+                    </label>
+
+                    <input type="email" id="correo-registro" name="correo" required>
+
+                    <small id="error-correo-registro" class="mensaje-error">
+                    </small>
+
+                    <small class="pista-formulario">
+                        Solo correos @duoc.cl, @profesor.duoc.cl o @gmail.com
+                    </small>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="clave-registro">
+                        Contraseña *
+                    </label>
+
+                    <input type="password" id="clave-registro" name="clave" minlength="4" maxlength="10" required>
+
+                    <small id="error-clave-registro" class="mensaje-error">
+                    </small>
+
+                    <small class="pista-formulario">
+                        Entre 4 y 10 caracteres
+                    </small>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="clave-confirmar">
+                        Confirmar contraseña *
+                    </label>
+
+                    <input type="password" id="clave-confirmar" name="clave2" minlength="4" maxlength="10" required>
+
+                    <small id="error-clave-confirmar" class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <button type="submit" class="boton">
+
+                    Registrarse
+
+                </button>
+
+
+                <p id="mensaje-registro" role="status">
+                </p>
+
+            </form>
+
+
+            <p class="enlace-bajo-formulario">
+                ¿Ya tienes cuenta?
+                <a href="login.html">Inicia sesión aquí</a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+
+        <p>
+            Distribuidora Gas El Volcán
+        </p>
+
+        <p>
+            Chillán, Región de Ñuble
+        </p>
+
+        <p>
+            &copy; 2026 Gas El Volcán
+        </p>
+
+    </footer>
+
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
