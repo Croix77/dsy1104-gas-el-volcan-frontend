@@ -915,3 +915,102 @@ if (menuHamburguesa && menuPrincipal) {
     });
 
 }
+
+// =========================
+// FORMULARIO DE CONTACTO
+// =========================
+
+var formularioContacto = document.getElementById("formulario-contacto");
+
+if (formularioContacto) {
+
+    var nombreContacto = document.getElementById("nombre");
+    var correoContacto = document.getElementById("correo");
+    var telefonoContacto = document.getElementById("telefono");
+    var asuntoContacto = document.getElementById("asunto");
+    var mensajeContacto = document.getElementById("mensaje");
+
+    var errorNombre = document.getElementById("error-nombre");
+    var errorCorreo = document.getElementById("error-correo");
+    var errorTelefono = document.getElementById("error-telefono");
+    var errorAsunto = document.getElementById("error-asunto");
+    var errorMensaje = document.getElementById("error-mensaje");
+
+    var mensajeExito = document.getElementById("mensaje-exito");
+
+    formularioContacto.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        var formularioValido = true;
+
+        // Limpiar mensajes anteriores
+        errorNombre.textContent = "";
+        errorCorreo.textContent = "";
+        errorTelefono.textContent = "";
+        errorAsunto.textContent = "";
+        errorMensaje.textContent = "";
+        mensajeExito.textContent = "";
+
+        var nombre = nombreContacto.value.trim();
+        var correo = correoContacto.value.trim();
+        var telefono = telefonoContacto.value.trim();
+        var asunto = asuntoContacto.value;
+        var mensaje = mensajeContacto.value.trim();
+
+        // Validar nombre
+        if (nombre === "") {
+            errorNombre.textContent = "Ingresa tu nombre.";
+            formularioValido = false;
+        } else if (nombre.length < 3) {
+            errorNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
+            formularioValido = false;
+        }
+
+        // Validar correo
+        var expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (correo === "") {
+            errorCorreo.textContent = "Ingresa tu correo electrónico.";
+            formularioValido = false;
+        } else if (!expresionCorreo.test(correo)) {
+            errorCorreo.textContent = "Ingresa un correo electrónico válido.";
+            formularioValido = false;
+        }
+
+        // Validar teléfono
+        var expresionTelefono = /^[0-9]{9}$/;
+
+        if (telefono !== "" && !expresionTelefono.test(telefono)) {
+            errorTelefono.textContent =
+                "El teléfono debe contener 9 números.";
+            formularioValido = false;
+        }
+
+        // Validar asunto
+        if (asunto === "") {
+            errorAsunto.textContent = "Selecciona un asunto.";
+            formularioValido = false;
+        }
+
+        // Validar mensaje
+        if (mensaje === "") {
+            errorMensaje.textContent = "Escribe tu mensaje.";
+            formularioValido = false;
+        } else if (mensaje.length < 10) {
+            errorMensaje.textContent =
+                "El mensaje debe tener al menos 10 caracteres.";
+            formularioValido = false;
+        }
+
+        // Si todo está correcto
+        if (formularioValido) {
+
+            mensajeExito.textContent =
+                "Mensaje enviado correctamente. Nos pondremos en contacto contigo.";
+
+            formularioContacto.reset();
+        }
+
+    });
+}

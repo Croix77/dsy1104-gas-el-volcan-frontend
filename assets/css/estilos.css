@@ -1586,4 +1586,23 @@ nav a.activo {
     vertical-align: super;
 }
 
+/*errores formulario contacto display */
 
+small {
+    display: block;
+}
+
+#error-nombre,
+#error-correo,
+#error-telefono,
+#error-asunto,
+#error-mensaje {
+    color: #c62828;
+    margin-top: 5px;
+}
+
+#mensaje-exito {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2e7d32;
+}
