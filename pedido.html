@@ -21,8 +21,7 @@
 
             <div class="logo">
 
-                <img src="assets/img/banner-gas-el-volcan.png"
-                     alt="Gas El Volcán - distribución de gas a domicilio">
+                <img src="assets/img/banner-gas-el-volcan.png" alt="Gas El Volcán - distribución de gas a domicilio">
 
             </div>
 
@@ -31,57 +30,19 @@
 
         <!-- menu de navegacion -->
         <nav>
-
-            <button
-                id="menuHamburguesa">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
+            <button id="menuHamburguesa" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+                ☰
             </button>
 
-            <ul id="navegacion">
-
-                <li>
-                    <a href="index.html">
-                        Inicio
-                    </a>
-                </li>
-
-                <li>
-                    <a href="productos.html">
-                        Productos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="pedido.html"
-                       class="activo">
-                        Realizar pedido
-                    </a>
-                </li>
-
-                <li>
-                    <a href="seguimiento.html">
-                        Seguimiento
-                    </a>
-                </li>
-
-                <li>
-                    <a href="nosotros.html">
-                        Nosotros
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contacto.html">
-                        Contacto
-                    </a>
-                </li>
-
+            <ul id="menuPrincipal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="pedido.html">Realizar pedido</a></li>
+                <li><a href="seguimiento.html">Seguimiento</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
             </ul>
-
         </nav>
 
     </header>
@@ -123,17 +84,10 @@
                         Nombre completo *
                     </label>
 
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        maxlength="50"
-                        placeholder="Ej: María González"
+                    <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Ej: María González"
                         required>
 
-                    <small
-                        id="error-nombre"
-                        class="mensaje-error">
+                    <small id="error-nombre" class="mensaje-error">
                     </small>
 
                 </div>
@@ -146,17 +100,9 @@
                         Teléfono *
                     </label>
 
-                    <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        maxlength="9"
-                        placeholder="912345678"
-                        required>
+                    <input type="tel" id="telefono" name="telefono" maxlength="9" placeholder="912345678" required>
 
-                    <small
-                        id="error-telefono"
-                        class="mensaje-error">
+                    <small id="error-telefono" class="mensaje-error">
                     </small>
 
                 </div>
@@ -169,17 +115,10 @@
                         Dirección de entrega *
                     </label>
 
-                    <input
-                        type="text"
-                        id="direccion"
-                        name="direccion"
-                        maxlength="100"
-                        placeholder="Ej: Av. Collín 1250, Chillán"
-                        required>
+                    <input type="text" id="direccion" name="direccion" maxlength="100"
+                        placeholder="Ej: Av. Collín 1250, Chillán" required>
 
-                    <small
-                        id="error-direccion"
-                        class="mensaje-error">
+                    <small id="error-direccion" class="mensaje-error">
                     </small>
 
                 </div>
@@ -195,12 +134,9 @@
                     <div class="tarjetas-producto">
 
                         <label class="tarjeta-producto">
-                            <input type="radio"
-                                   name="producto"
-                                   value="Cilindro 5 kg">
+                            <input type="radio" name="producto" value="Cilindro 5 kg">
 
-                            <img src="assets/img/gas-5kg.png"
-                                 alt="Cilindro de gas de 5 kilogramos">
+                            <img src="assets/img/gas-5kg.png" alt="Cilindro de gas de 5 kilogramos">
 
                             <strong>Cilindro 5 kg</strong>
 
@@ -209,12 +145,9 @@
 
 
                         <label class="tarjeta-producto">
-                            <input type="radio"
-                                   name="producto"
-                                   value="Cilindro 11 kg">
+                            <input type="radio" name="producto" value="Cilindro 11 kg">
 
-                            <img src="assets/img/gas-11kg.png"
-                                 alt="Cilindro de gas de 11 kilogramos">
+                            <img src="assets/img/gas-11kg.png" alt="Cilindro de gas de 11 kilogramos">
 
                             <strong>Cilindro 11 kg</strong>
 
@@ -223,12 +156,9 @@
 
 
                         <label class="tarjeta-producto">
-                            <input type="radio"
-                                   name="producto"
-                                   value="Cilindro 15 kg">
+                            <input type="radio" name="producto" value="Cilindro 15 kg">
 
-                            <img src="assets/img/gas-15kg.png"
-                                 alt="Cilindro de gas de 15 kilogramos">
+                            <img src="assets/img/gas-15kg.png" alt="Cilindro de gas de 15 kilogramos">
 
                             <strong>Cilindro 15 kg</strong>
 
@@ -237,9 +167,7 @@
 
                     </div>
 
-                    <small
-                        id="error-producto"
-                        class="mensaje-error">
+                    <small id="error-producto" class="mensaje-error">
                     </small>
 
                 </fieldset>
@@ -252,18 +180,9 @@
                         Cantidad *
                     </label>
 
-                    <input
-                        type="number"
-                        id="cantidad"
-                        name="cantidad"
-                        min="1"
-                        max="20"
-                        value="1"
-                        required>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="20" value="1" required>
 
-                    <small
-                        id="error-cantidad"
-                        class="mensaje-error">
+                    <small id="error-cantidad" class="mensaje-error">
                     </small>
 
                 </div>
@@ -276,17 +195,11 @@
                         Observaciones
                     </label>
 
-                    <textarea
-                        id="observaciones"
-                        name="observaciones"
-                        rows="4"
-                        maxlength="200"
+                    <textarea id="observaciones" name="observaciones" rows="4" maxlength="200"
                         placeholder="Ej: dejar en portería...">
                     </textarea>
 
-                    <small
-                        id="error-observaciones"
-                        class="mensaje-error">
+                    <small id="error-observaciones" class="mensaje-error">
                     </small>
 
                     <small class="pista-formulario">
@@ -319,18 +232,14 @@
                 </div>
 
 
-                <button
-                    type="submit"
-                    class="boton">
+                <button type="submit" class="boton">
 
                     Realizar pedido
 
                 </button>
 
 
-                <p
-                    id="mensaje-exito"
-                    class="mensaje-exito">
+                <p id="mensaje-exito" class="mensaje-exito">
                 </p>
 
             </form>
