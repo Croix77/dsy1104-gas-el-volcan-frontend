@@ -535,16 +535,6 @@ actualizarContadorCarrito();
 // menu hamburguesa
 // =========================================
 
-var botonMenu = document.getElementById('menuHamburguesa');
-var navegacion = document.getElementById('navegacion');
-
-if (botonMenu) {
-    botonMenu.addEventListener('click', function () {
-        navegacion.classList.toggle('abierto');
-        botonMenu.classList.toggle('activo');
-    });
-}
-
 
 // =========================================
 // pagina pedido
@@ -900,4 +890,28 @@ if (formularioSeguimiento) {
         document.getElementById('numero-pedido').value = numeroUrl;
         consultar();
     }
+}
+
+// =========================================
+// menu hamburguesa
+// =========================================
+var menuHamburguesa = document.getElementById("menuHamburguesa");
+var menuPrincipal = document.getElementById("menuPrincipal");
+
+if (menuHamburguesa && menuPrincipal) {
+
+    menuHamburguesa.addEventListener("click", function () {
+
+        menuPrincipal.classList.toggle("menu-abierto");
+
+        var menuAbierto =
+            menuPrincipal.classList.contains("menu-abierto");
+
+        menuHamburguesa.setAttribute(
+            "aria-expanded",
+            menuAbierto
+        );
+
+    });
+
 }

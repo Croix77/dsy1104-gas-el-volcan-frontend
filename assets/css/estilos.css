@@ -35,12 +35,10 @@ header {
 
     padding: 15px 20px;
 
-    background: linear-gradient(
-        135deg,
-        #fff7ed,
-        #ffffff,
-        #ffe8d6
-    );
+    background: linear-gradient(135deg,
+            #fff7ed,
+            #ffffff,
+            #ffe8d6);
 }
 
 /* Logo temporal */
@@ -718,6 +716,7 @@ footer p {
     background-color: #fee2e2;
     color: #b91c1c;
 }
+
 /* =========================================
    P├üGINA CONTACTO
 ========================================= */
@@ -795,7 +794,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-.seccion-formulario > p {
+.seccion-formulario>p {
     text-align: center;
     margin-bottom: 25px;
     color: #666666;
@@ -1403,3 +1402,169 @@ nav a.activo {
         height: 100%;
     }
 }
+
+/* =========================
+   PÁGINA NOSOTROS
+   ========================= */
+
+.seccion-nosotros {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.seccion-nosotros h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seccion-nosotros>p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #555;
+}
+
+.contenedor-nosotros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.tarjeta-nosotros {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tarjeta-nosotros h3 {
+    color: #d94b20;
+    margin-bottom: 10px;
+}
+
+.tarjeta-nosotros p {
+    color: #555;
+}
+
+.nosotros-pedido {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 35px 20px;
+    border-radius: 8px;
+}
+
+.nosotros-pedido h2 {
+    margin-bottom: 10px;
+}
+
+.nosotros-pedido p {
+    margin-bottom: 10px;
+}
+
+
+/* Responsive página Nosotros */
+
+@media (max-width: 768px) {
+
+    .contenedor-nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-nosotros {
+        padding: 20px;
+    }
+
+}
+
+.imagen-historia {
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.imagen-historia img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.imagen-historia figcaption {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* menu hamburguesa */
+
+
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        position: relative;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.menu-abierto {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+}
+
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-hamburguesa:hover {
+    background-color: #d94b20;
+    border-radius: 6px;
+}
+
+.menu-hamburguesa:hover,
+.menu-hamburguesa[aria-expanded="true"] {
+    background-color: #d94b20;
+    border-radius: 6px;
+}
+
+

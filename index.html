@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora Gas El Volcán</title>
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
     <!-- Encabezado -->
     <header>
@@ -15,14 +17,18 @@
             </div>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <button id="menuHamburguesa" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul id="menuPrincipal">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="pedido.html">Realizar pedido</a></li>
                 <li><a href="seguimiento.html">Seguimiento</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li class="item-carrito">
+<li class="item-carrito">
                     <a href="carrito.html" aria-label="Ir al carrito de compras">
                         🛒 <span id="contador-carrito">0</span>
                     </a>
@@ -121,4 +127,5 @@
     <!-- JavaScript externo -->
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>
