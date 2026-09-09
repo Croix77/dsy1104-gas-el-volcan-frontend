@@ -1207,7 +1207,7 @@ if (formularioRegistro) {
         }
 
         if (!correoPermitido(correo)) {
-            error.textContent = 'El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.';
+            error.textContent = 'El correo debe ser valido.';
             return false;
         }
 
