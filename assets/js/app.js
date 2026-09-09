@@ -49,7 +49,7 @@ const productos = [
     },
     {
         codigo: "RG001",
-        nombre: "Regulador dom├®stico est├índar",
+        nombre: "Regulador doméstico estándar",
         categoria: "Reguladores",
         descripcion: "Regulador de 1 etapa para cilindros de 5, 11 y 15 kg.",
         descripcionLarga:
@@ -109,7 +109,7 @@ const productos = [
     },
     {
         codigo: "MG003",
-        nombre: "Abrazadera met├ílica",
+        nombre: "Abrazadera metálica",
         categoria: "Mangueras y Conexiones",
         descripcion: "Abrazadera de acero para asegurar conexiones.",
         descripcionLarga:
@@ -217,7 +217,7 @@ function agregarAlCarrito(codigo) {
     }
 
     if (productoSeleccionado.stock <= 0) {
-        mostrarAviso("Lo sentimos, este producto est├í agotado.", "error");
+        mostrarAviso("Lo sentimos, este producto está agotado.", "error");
         return;
     }
 
@@ -231,7 +231,7 @@ function agregarAlCarrito(codigo) {
             mostrarAviso(productoSeleccionado.nombre + " añadido al carrito.", "exito");
         } else {
             mostrarAviso(
-                "Stock m├íximo disponible alcanzado para " + productoSeleccionado.nombre + ".",
+                "Stock máximo disponible alcanzado para " + productoSeleccionado.nombre + ".",
                 "error"
             );
         }
@@ -265,7 +265,7 @@ function mostrarProductos() {
         const etiquetaStock = agotado
             ? `<p class="etiqueta-stock agotado">Agotado</p>`
             : stockCritico
-                ? `<p class="etiqueta-stock critico">┬íSolo quedan ${producto.stock}!</p>`
+                ? `<p class="etiqueta-stock critico">¡Solo quedan ${producto.stock}!</p>`
                 : "";
 
         listaProductos.innerHTML += `
@@ -310,7 +310,7 @@ function mostrarDetalleProducto() {
             <p class="mensaje-aviso">
                 No encontramos el producto solicitado.
             </p>
-            <a href="productos.html" class="boton">Volver al cat├ílogo</a>
+            <a href="productos.html" class="boton">Volver al catálogo</a>
         `;
         return;
     }
@@ -336,7 +336,7 @@ function mostrarDetalleProducto() {
                     }
                     ${
                         producto.stock > 0 && producto.stock <= producto.stockCritico
-                            ? `<p class="alerta-stock-critico">┬íQuedan pocas unidades!</p>`
+                            ? `<p class="alerta-stock-critico">¡Quedan pocas unidades!</p>`
                             : ""
                     }
                 </div>
@@ -347,10 +347,10 @@ function mostrarDetalleProducto() {
                     data-codigo="${producto.codigo}"
                     ${stockInsuficiente ? "disabled" : ""}
                 >
-                    A├▒adir al carrito
+                    Añadir al carrito
                 </button>
 
-                <a href="productos.html" class="enlace-volver">&larr; Volver al cat├ílogo</a>
+                <a href="productos.html" class="enlace-volver">&larr; Volver al catálogo</a>
             </div>
         </article>
     `;

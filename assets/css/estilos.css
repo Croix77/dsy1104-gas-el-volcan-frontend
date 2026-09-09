@@ -1567,4 +1567,23 @@ nav a.activo {
     border-radius: 6px;
 }
 
+/* icono de carrito en el menu */
+
+.item-carrito a {
+    font-size: 1.35rem;
+    padding: 14px 18px;
+    white-space: nowrap;
+}
+
+.item-carrito a span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #d62828;
+    border-radius: 50%;
+    padding: 2px 7px;
+    margin-left: 4px;
+    vertical-align: super;
+}
+
 
