@@ -1585,6 +1585,50 @@ nav a.activo {
 
 /*errores formulario contacto display */
 
+/* enlace bajo el formulario (login / registro) */
+
+.enlace-bajo-formulario {
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+}
+
+.enlace-bajo-formulario a {
+    color: #e65324;
+    font-weight: bold;
+}
+
+/* panel de usuario */
+
+.panel-usuario {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.panel-usuario h2 {
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+
+.panel-usuario p {
+    color: #444;
+    margin: 8px 0;
+}
+
+.panel-usuario span {
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+.panel-usuario .boton {
+    margin-top: 15px;
+}
+
 small {
     display: block;
 }
